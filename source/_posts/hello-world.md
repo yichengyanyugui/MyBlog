@@ -1,38 +1,41 @@
 ---
-title: Hello World
+title: 你好，世界
+date: 2026.01.03
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+欢迎使用 [Hexo](https://hexo.io/zh-cn/)！这是你的第一篇博客文章。  
+查阅[文档](https://hexo.io/zh-cn/docs/) 获取更多信息。如果你在使用 Hexo 时遇到任何问题，可以在[疑难解答](https://hexo.io/zh-cn/docs/troubleshooting.html)中查找答案，或者在 [GitHub](https://github.com/hexojs/hexo/issues) 上向我提问。
 
-## Quick Start
+## 快速开始
 
-### Create a new post
+### 创建一篇新文章
 
-``` bash
-$ hexo new "My New Post"
+```bash
+$ hexo new "我的新文章"
 ```
 
-More info: [Writing](https://hexo.io/docs/writing.html)
+更多信息：[文章写作](https://hexo.io/zh-cn/docs/writing.html)
 
-### Run server
+### 启动服务器
 
-``` bash
+```bash
 $ hexo server
 ```
 
-More info: [Server](https://hexo.io/docs/server.html)
+更多信息：[服务器](https://hexo.io/zh-cn/docs/server.html)
 
-### Generate static files
+### 生成静态文件
 
-``` bash
+```bash
 $ hexo generate
 ```
 
-More info: [Generating](https://hexo.io/docs/generating.html)
+更多信息：[生成](https://hexo.io/zh-cn/docs/generating.html)
 
-### Deploy to remote sites
+### 部署到远程站点
 
-``` bash
+```bash
 $ hexo deploy
 ```
 
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+更多信息：[一键部署](https://hexo.io/zh-cn/docs/one-command-deployment.html)
+```
