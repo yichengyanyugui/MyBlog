@@ -38,11 +38,11 @@ java -version
 
 （1）[Neo4j开发中心](https://neo4j.com/deployment-center/)找到**Graph Database Self-Managed**，选择**Windows社区版**并下载。
 
-![](\img\post\2-1.png)
+![](/img/post/2-1.png)
 
 （2）将下载好的压缩包解压，并将**bin目录**添加到**系统环境变量**中。
 
-![](\img\post\2-2.png)
+![](/img/post/2-2.png)
 
 （3）「Win+R」，输入**cmd**，打开终端，输入**neo4j.bat console**，如果看到以下结果则成功。
 
@@ -50,30 +50,30 @@ java -version
 neo4j.bat console
 ```
 
-![](\img\post\2-3.png)
+![](/img/post/2-3.png)
 
-（4）在浏览器中访问端口http://localhost:7474/，就可访问。第一登录需要输入初始用户名称和密码，均为**neo4j**，登录后需要修改密码。
+（4）在浏览器中访问[本地端口](http://localhost:7474/)7474，就可访问。第一登录需要输入初始用户名称和密码，均为**neo4j**，登录后需要修改密码。
 
-![](\img\post\2-4.png)
+![](/img/post/2-4.png)
 
 （5）登录进入之后，按照步骤运行例子（最后一步只需点击即可）。
 
-![](\img\post\2-5.png)
+![](/img/post/2-5.png)
 
 （6）点击运行就可以看到一个图结构的示例。
 
-![](\img\post\2-6.png)
+![](/img/post/2-6.png)
 
 # 4.安装Neo4j Desktop（可忽略）
 
 （1）[Neo4j开发中心](https://neo4j.com/deployment-center/)找到**Neo4j Desktop**，选择**Windows**并下载安装。
 
-![](\img\post\2-7.png)
+![](/img/post/2-7.png)
 
 （2）打开后选择Local instances并创建Instance
 
-![](\img\post\2-8.png)
+![](/img/post/2-8.png)
 
-![](\img\post\2-9.png)
+![](/img/post/2-9.png)
 
-![](\img\post\2-10.png)
+![](/img/post/2-10.png)
