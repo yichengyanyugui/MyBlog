@@ -4,22 +4,34 @@ menu:
     分类: /categories/ || icon-shapes
     标签: /tags/ || icon-tags
 
-  友链:
-    友人帐: /link/ || icon-link
-    朋友圈: /fcircle/ || icon-artstation
-    留言板: /comments/ || icon-envelope
+  友链: /link/ || icon-link
 
-  我的:
-    音乐馆: /music/ || icon-music
-    # 追番页: /bangumis/ || icon-bilibili1
-    # 相册集: /album/ || icon-images
-    # 小空调: /air-conditioner/ || icon-fan
+  音乐馆: /music/ || icon-music
 
-  关于:
-    关于本人: /about/ || icon-zhifeiji
-    闲言碎语: /essay/ || icon-lightbulb
-    随便逛逛: javascript:toRandomPost() || icon-shoe-prints1
-    # nav相关配置
+  关于: /about/ || icon-zhifeiji
+
+# menu:
+#   文章:
+#     隧道: /archives/ || icon-box-archive
+#     分类: /categories/ || icon-shapes
+#     标签: /tags/ || icon-tags
+
+#   友链:
+#     友人帐: /link/ || icon-link
+#     朋友圈: /fcircle/ || icon-artstation
+#     留言板: /comments/ || icon-envelope
+
+#   我的:
+#     音乐馆: /music/ || icon-music
+#     追番页: /bangumis/ || icon-bilibili1
+#     相册集: /album/ || icon-images
+#     小空调: /air-conditioner/ || icon-fan
+
+#   关于:
+#     关于本人: /about/ || icon-zhifeiji
+#     闲言碎语: /essay/ || icon-lightbulb
+#     随便逛逛: javascript:toRandomPost() || icon-shoe-prints1
+# nav相关配置
 nav:
   enable: false
   travelling: false
@@ -136,7 +148,7 @@ katex:
 # Favicon（网站图标）
 favicon: /favicon.ico
 
-# Avatar (头像)
+# Avatar (头像) https://ycyyg.space/img/avatar.jpg
 avatar:
   img: /img/avatar.jpg
   effect: false
@@ -240,9 +252,9 @@ post_copyright:
   copyright_author_img_front:
   copyright_author_link: /
 
-# Sponsor/reward
+# Sponsor/reward (打赏)
 reward:
-  enable: true
+  enable: false
   QR_code:
   - img: https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png
     link:
@@ -281,7 +293,7 @@ photofigcaption: false
 # 3: 只有下一篇，并且只在文章滚动到评论区时显示下一篇文章(旧文章)
 # 4: 只有下一篇，并且只在文章滚动到评论区时显示下一篇文章(旧文章) 显示图片cover
 # false: disable pagination
-post_pagination: 2
+post_pagination: false
 
 # Displays outdated notice for a post (文章过期提醒)
 noticeOutdate:
@@ -792,7 +804,7 @@ preloader:
   source: 3
   # pace theme (see https://codebyzach.github.io/pace/)
   pace_css_url:
-  avatar: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg # 自定加载动画义头像
+  avatar: /img/avatar.jpg # 自定加载动画义头像
 
 # aside (侧边栏)
 # --------------------------------------
@@ -1061,8 +1073,8 @@ home_top:
   subTitle: 终抵群星!
   siteText: ycyyg.space
   category:
-  - name: 前端
-    path: /categories/前端开发/
+  - name: 后端
+    path: /categories/后端开发/
     shadow: var(--anzhiyu-shadow-blue)
     class: blue
     icon: anzhiyu-icon-dove
@@ -1157,14 +1169,14 @@ music_page_default: nav_music
 
 # 评论匿名邮箱
 visitorMail:
-  enable: true
+  enable: false
   mail: ""
 
 # ptool 文章底部工具
 ptool:
   enable: true
-  share_mobile: true
-  share_weibo: true
+  share_mobile: false
+  share_weibo: false
   share_copyurl: true
   categories: false # 是否显示分类
   mode:
