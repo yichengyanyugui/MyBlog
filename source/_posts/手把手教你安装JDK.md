@@ -11,7 +11,7 @@ tags:
 - Java环境
 - 开发环境
 
-id: 1
+keywords: 手把手教你安装JDK
 
 ---
 
