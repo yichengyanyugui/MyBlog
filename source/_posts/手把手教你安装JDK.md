@@ -1,17 +1,15 @@
 ---
-
 title: 手把手教你安装JDK
 
 date: 2026.01.21
 
-categories:  Java
+categories: 开发环境
 
 tags:
-- JDK
-- Java环境
-- 开发环境
+  - JDK
+  - Java
 
-keywords: 手把手教你安装JDK
+id: 1
 
 ---
 

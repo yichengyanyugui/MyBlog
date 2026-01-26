@@ -4,12 +4,18 @@ title: 手把手教你安装Neo4j
 
 date: 2026.01.21
 
-categories:  Neo4j
+categories: 开发环境
 
 tags:
-- neo4j
+  - Neo4j
+  - 图数据库
+  - 安装教程
+  - 环境搭建
+  - Graph Database
+  - Cypher
+  - NoSQL
 
-keywords: 手把手教你安装Neo4j
+id: 2
 
 ---
 
