@@ -535,18 +535,16 @@ footer:
       - title: 版权协议
         link: /copyright/
   footerBar:
-    enable: false
+    enable: true
     authorLink: /
     cc:
       enable: false
       link: /copyright
     linkList:
-    - link: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
-      text: 主题
-    - link: https://image.anheyu.com
-      text: 图床
+    - link: http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010102000001
+      text: 京公网安备 11010102000001号
     - link: https://beian.miit.gov.cn/
-      text: 湘ICP备-xxxxxxx号
+      text: 辽ICP备2026000741号
     subTitle:
       enable: false
       # Typewriter Effect (打字效果)
@@ -743,7 +741,7 @@ ClickShowText:
 
 # Default display mode (网站默认的显示模式)
 # light (default) / dark
-display_mode: light
+display_mode: dark
 
 # Beautify (美化页面显示)
 beautify:
@@ -935,12 +933,12 @@ centerConsole:
 darkmode:
   enable: true
   # Toggle Button to switch dark/light mode
-  button: true
+  button: false
   # Switch dark/light mode automatically (自动切换 dark mode和 light mode)
   # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
   # autoChangeMode: false
-  autoChangeMode: 1
+  autoChangeMode: false
   start: # 8
   end:
     # 22

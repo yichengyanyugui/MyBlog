@@ -13,7 +13,7 @@ timezone: 'Asia/Shanghai' # 时区（留空则使用系统时区，例如 'Asia/
 
 # URL 设置
 ## 如果使用 GitHub Pages
-url: http://example.com # 网站根网址（必须修改！部署时最重要的一项）
+url: https://ycyyg.space/ # 网站根网址（必须修改！部署时最重要的一项）
 permalink: :year/:month/:day/:title/ # 文章永久链接格式（常见写法）
 permalink_defaults: # 当某些字段缺失时的默认值（一般不用改）
 pretty_urls:
@@ -112,3 +112,7 @@ deploy:
 aplayer:
   meting: true # 是否启用 MetingJS（在线音乐源）
   asset_inject: false # 是否自动注入 aplayer 的 css/js（建议 false，手动管理更好）
+
+# 站点地图配置
+sitemap:
+  path: sitemap.xml # 生成的文件路径
