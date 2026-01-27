@@ -931,7 +931,7 @@ centerConsole:
 
       # dark mode
 darkmode:
-  enable: true
+  enable: false
   # Toggle Button to switch dark/light mode
   button: false
   # Switch dark/light mode automatically (自动切换 dark mode和 light mode)

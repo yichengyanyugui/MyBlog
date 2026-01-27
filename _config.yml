@@ -5,7 +5,7 @@
 # 网站基本信息
 title: 一城烟雨归 # 网站标题
 subtitle: '' # 副标题（可留空）
-description: '' # 网站描述（用于SEO和meta description）
+description: 'Blog' # 网站描述（用于SEO和meta description）
 keywords: # 网站关键词（用英文逗号分隔），有助于SEO
 author: 一城烟雨归 # 默认作者名（可在文章中单独覆盖）
 language: zh-CN # 网站主要语言（中文推荐用 zh-CN 或 zh-Hans）
