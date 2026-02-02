@@ -1,34 +1,42 @@
-name: 博客发布版提取
+name: Sync Public to Separate Repo
 
 on:
   push:
-    branches: [ main ] # 只有当 main 分支有变动时触发
+    branches: [ main ] # 当你向源码仓库 push 代码时触发
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout source code
+    # 1. 检出源码仓库
+    - name: Checkout Source
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
 
-    - name: Pushes to another repository
-      uses: cpina/github-action-push-to-another-repository@main
-      env:
-        # 使用在第二步设置的 Secret
-        API_TOKEN_GITHUB: ${{ secrets.TARGET_REPO_TOKEN }}
+    # 2. 如果你的 public 目录是生成的（例如 Hexo），请取消下面三行的注释
+    # - name: Install and Build
+    #   run: npm install && npx hexo generate
+
+    # 3. 将指定目录推送到目标仓库
+    - name: Deploy to Separate Repo
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        # 1. 要提取的本地目录
-        source-directory: 'public'
+        # 使用你在 Secrets 中存好的 Token
+        personal_token: ${{ secrets.TARGET_REPO_TOKEN }}
 
-        # 2. 目标仓库信息
-        destination-github-username: 'yichengyanyugui'
-        destination-repository-name: 'MyBlog-Public'
+        # 目标用户名和仓库名
+        external_repository: yichengyanyugui/MyBlog-Public
 
-        # 3. 目标分支
-        target-branch: main
+        # 来源目录：只提取 public 文件夹里的内容
+        publish_dir: ./public
 
-        # 4. 提交信息
-        commit-message: "Update blog content from source"
-        user-email: github-actions[bot]@users.noreply.github.com
+        # 目标分支
+        publish_branch: main
+
+        # 强制覆盖历史（保持目标仓库只有最新的构建结果）
+        force_orphan: true
+
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+        commit_message: "Site updated: ${{ github.event.head_commit.message }}"
