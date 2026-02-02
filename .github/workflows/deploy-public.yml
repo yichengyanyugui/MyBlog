@@ -1,45 +1,34 @@
-name: Sync public/ to separate repo
+name: 博客发布版提取
 
 on:
   push:
-    branches: [ main ] # 或你用的主分支
+    branches: [ main ] # 只有当 main 分支有变动时触发
 
 jobs:
-  sync-public:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout main repo
+    - name: Checkout source code
       uses: actions/checkout@v4
       with:
-        fetch-depth: 0 # 重要：保留完整历史
+        fetch-depth: 0
 
-    # 核心：把 public/ 作为独立仓库推送到另一个 repo
-    - name: Push public/ to separate repository
+    - name: Pushes to another repository
+      uses: cpina/github-action-push-to-another-repository@main
       env:
-        TARGET_REPO: yichengyanyugui/MyBlog-Public # ← 改成你的目标仓库名（格式：user/repo）
-        TARGET_BRANCH: main # 目标分支，通常 main
-        SOURCE_DIR: public # 你的子目录名
-      run: |
-        # 创建临时工作目录
-        mkdir temp-repo
-        cd temp-repo
+        # 使用我们在第二步设置的 Secret
+        API_TOKEN_GITHUB: ${{ secrets.TARGET_REPO_TOKEN }}
+      with:
+        # 1. 要提取的本地目录
+        source-directory: 'public'
 
-        # 初始化并添加远程
-        git init
-        git remote add origin https://x-access-token:$$   {{ secrets.TARGET_REPO_TOKEN }}@github.com/   $${TARGET_REPO}.git
+        # 2. 目标仓库信息
+        destination-github-username: 'yichengyanyugui'
+        destination-repository-name: 'MyBlog-Public'
 
-        # 从主仓库拉取 public/ 的历史（使用 subtree split）
-        git fetch --depth=1 origin
-        git checkout -b temp-branch
+        # 3. 目标分支
+        target-branch: main
 
-        # 把 public/ 的内容作为根目录提交（保留历史）
-        git --work-tree=../${SOURCE_DIR} --git-dir=.git add -A
-        git --work-tree=../${SOURCE_DIR} --git-dir=.git commit -m "Update from main repo $(git rev-parse --short HEAD)" || echo "No changes to commit"
-
-        # 强制推送到目标仓库（覆盖历史保持干净）
-        git push --force origin temp-branch:${TARGET_BRANCH}
-
-        # 清理
-        cd ..
-        rm -rf temp-repo
+        # 4. 提交信息
+        commit-message: "Update blog content from source"
+        user-email: github-actions[bot]@users.noreply.github.com
