@@ -40,7 +40,7 @@ jobs:
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
         commit_message: "Site updated: ${{ github.event.head_commit.message }}"
-    # 在之前的推送步骤完成后，执行这个
+    # 推送到服务器
     - name: SSH Remote Commands
       uses: appleboy/ssh-action@v1.0.3
       with:
