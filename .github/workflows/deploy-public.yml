@@ -16,7 +16,7 @@ jobs:
     - name: Pushes to another repository
       uses: cpina/github-action-push-to-another-repository@main
       env:
-        # 使用我们在第二步设置的 Secret
+        # 使用在第二步设置的 Secret
         API_TOKEN_GITHUB: ${{ secrets.TARGET_REPO_TOKEN }}
       with:
         # 1. 要提取的本地目录
