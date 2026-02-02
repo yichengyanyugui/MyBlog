@@ -10,27 +10,6 @@ menu:
 
   关于: /about/ || icon-zhifeiji
 
-# menu:
-#   文章:
-#     隧道: /archives/ || icon-box-archive
-#     分类: /categories/ || icon-shapes
-#     标签: /tags/ || icon-tags
-
-#   友链:
-#     友人帐: /link/ || icon-link
-#     朋友圈: /fcircle/ || icon-artstation
-#     留言板: /comments/ || icon-envelope
-
-#   我的:
-#     音乐馆: /music/ || icon-music
-#     追番页: /bangumis/ || icon-bilibili1
-#     相册集: /album/ || icon-images
-#     小空调: /air-conditioner/ || icon-fan
-
-#   关于:
-#     关于本人: /about/ || icon-zhifeiji
-#     闲言碎语: /essay/ || icon-lightbulb
-#     随便逛逛: javascript:toRandomPost() || icon-shoe-prints1
 # nav相关配置
 nav:
   enable: false
@@ -541,8 +520,8 @@ footer:
       enable: false
       link: /copyright
     linkList:
-    - link: http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010102000001
-      text: 京公网安备 11010102000001号
+    - link: http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=21019402000246
+      text: 辽公网安备21019402000246号
     - link: https://beian.miit.gov.cn/
       text: 辽ICP备2026000741号
     subTitle:
