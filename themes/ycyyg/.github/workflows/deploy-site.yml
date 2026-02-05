@@ -1,0 +1,22 @@
+name: Sync Public to Separate Repo
+
+on:
+  push:
+    branches: [ main ] # 当你向源码仓库 push 代码时触发
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    # 推送到服务器
+    - name: SSH Remote Commands
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.SERVER_HOST }}
+        username: ${{ secrets.SERVER_USER }}
+        key: ${{ secrets.SERVER_SSH_KEY }}
+        script: |
+          cd /opt/1panel/www/sites/ycyyg.space/index
+          # 如果是第一次，可能需要执行 git init 等，但通常建议预先 clone 好
+          git pull origin main
+          echo "Deployment finished successfully!"
